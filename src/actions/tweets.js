@@ -23,7 +23,8 @@ export function handleAddTweet(text, replyingTo) {
       replyingTo,
     })
       .then((tweet) => dispatch(addTweet(tweet)))
-      .then(() => dispatch(hideLoading()));
+      .then(() => dispatch(hideLoading()))
+      .then(() => console.log("done adding tweet"));
   };
 }
 
